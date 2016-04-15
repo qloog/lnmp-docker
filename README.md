@@ -22,7 +22,23 @@ brew install brew-cask  // 安装 brew-cask
 brew cask install  VirtualBox // 安装 VirtualBox，保存到：/opt/homebrew-cask/Caskroom
 ```
 
-### Git: 确保Xcode已经安装
+### xcode
+
+```
+xcode-select --install  # 弹窗提示后，点击“安装”即可
+```
+
+### Git
+
+```
+brew install git
+```
+> 安装xcode后，git会被默认安装，如果已安装可忽略
+
+## docker 基础
+
+ * [Docker是什么](https://www.docker.com/whatisdocker/)
+ * [Docker命令行的基础使用](https://docs.docker.com/userguide/)
 
 ## 安装Docker基础环境(Docker/Docker-Machine/Docker-Compose)
 
@@ -33,27 +49,21 @@ brew install docker-machine -vvv
 brew install docker-compose -vvv
 ```
 
-安装docker-machine，会下载Boot2docker，默认会从AWS下载镜像，此处需要翻墙
-如果无法翻墙可以手动下载Boot2Docker所需ISO镜像
+> 安装docker-machine，会下载Boot2docker，默认会从AWS下载镜像，此处需要翻墙
+> 如果无法翻墙可以手动下载Boot2Docker所需ISO镜像
 
 ## 创建虚拟机
 ```
 docker-machine create --driver virtualbox default
 ```
 
-运行Docker需要设置环境变量，建议在~/.bashrc(或.zshrc)中加入
+## 链接虚拟机
 
 ```
-if [ "`docker-machine status`" = "Running" ]; then
-    eval $(docker-machine env default)
-fi
+eval $(docker-machine env default)
 ```
+> 运行Docker需要设置环境变量，建议在~/.bashrc(或.zshrc)中加入
 
-## 创建APP需要的基础容器：系统（Ubuntu）
-
-```
-docker run ubuntu:14:04
-```
 
 ## 启动Laravel5-backend
 

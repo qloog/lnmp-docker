@@ -23,18 +23,18 @@ dl:
 	wget https://getcomposer.org/composer.phar -O php/composer.phar
 
 build:
-	make ubuntu
 	make build-nginx
 	make build-mysql
 	make build-php
 	make build-node
+
 
 build-nginx:
 	docker build -t eva/nginx ./nginx
 
 run-nginx:
 	#docker run -i -d -p 80:80 -v ~/opt:/opt -t -d eva/nginx
-	docker run -i -d -p 80:80 -v ~/opt:/opt -t -d daocloud.io/nginx
+	docker run -i -d -p 8000:80 -v ~/opt:/opt -t -d daocloud.io/nginx
 
 in-nginx:
 	#docker run -i -p 80:80 -v ~/opt:/opt -t eva/nginx /bin/bash
