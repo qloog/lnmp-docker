@@ -92,10 +92,11 @@ git clone https://github.com/qloog/Dockerfiles.git
 cd Dockerfiles
 ```
 
-下载php扩展包
+下载php扩展包及构建镜像
 
 ```
 make dl
+make build
 ```
 
 构建及运行环境
