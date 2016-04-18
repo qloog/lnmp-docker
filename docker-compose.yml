@@ -1,9 +1,9 @@
 nginx:
     build: ./nginx
     ports:
-      - "80:80"
+      - "8080:80"
     links:
-      - "php"
+      - php
     volumes:
       - ~/opt:/opt
 
@@ -15,7 +15,7 @@ php:
       - "mysql"
       - "memcache"
       - "redis"
-      - "gearman"
+#     - "gearman"
     volumes:
       - ~/opt:/opt
 
@@ -38,9 +38,9 @@ redis:
     ports:
       - "6379:6379"
 
-gearman:
-    build: ./gearman
-    ports:
-      - "4730:4730"
-    volumes:
-      - ~/opt:/opt
+#gearman:
+#    build: ./gearman
+#    ports:
+#      - "4730:4730"
+#    volumes:
+#      - ~/opt:/opt

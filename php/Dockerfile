@@ -1,8 +1,13 @@
-FROM php:5.6-fpm
+# FROM php:5.6-fpm
+FROM daocloud.io/php:5.6-fpm
 
 # Install env
 ADD sources.list    /etc/apt/sources.list
-RUN apt-get update && apt-get install -y \
+# apt-get update 时
+# 如果遇到类似错误：E: Release file for http://mirrors.aliyun.com/debian/dists/jessie-proposed-updates/InRelease is expired (invalid since 3d 8h 10min 44s). Updates for this repository will not be applied. 
+#需要增加参数: -o Acquire::Check-Valid-Until=false, 作用是 等待源修复，或者暂时不检查有效性
+RUN apt-get -o Acquire::Check-Valid-Until=false update
+RUN apt-get install -y \
         git \
         libgearman-dev \
         libmemcached-dev \
