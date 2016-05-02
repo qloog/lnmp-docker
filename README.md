@@ -64,10 +64,18 @@ docker-machine create --driver virtualbox default
 
 ## 链接虚拟机
 
+运行Docker需要设置环境变量
 ```
 eval $(docker-machine env default)
 ```
-> 运行Docker需要设置环境变量，建议在~/.bashrc(或.zshrc)中加入
+
+建议在~/.bashrc(或.zshrc)中加入
+
+```
+if [ "`docker-machine status`" = "Running" ]; then
+    eval $(docker-machine env default)
+fi
+```
 
 
 ## 启动Laravel5-backend
