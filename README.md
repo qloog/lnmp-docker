@@ -52,7 +52,7 @@ brew install docker-compose -vvv
 > 安装docker-machine，会下载Boot2docker，默认会从AWS下载镜像，此处需要翻墙
 > 如果无法翻墙可以手动下载Boot2Docker所需ISO镜像,下载地址：https://github.com/boot2docker/boot2docker/releases/
 > 找到对应的 release 的boot2docker.iso 文件，放入~/.docker/machine/cache 目录里
-> cd ~/.docker/machine/cache  && get https://github.com/boot2docker/boot2docker/releases/download/v1.11.0/boot2docker.iso
+> cd ~/.docker/machine/cache  && wget https://github.com/boot2docker/boot2docker/releases/download/v1.11.0/boot2docker.iso
 
 ## 创建虚拟机default
 
