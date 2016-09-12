@@ -1,6 +1,6 @@
 # Run Under Mac
 
-## Docker for Mac (baseed on HyperKit VM)
+## Docker for Mac (Recommend)
 
 Docker Native
 
@@ -63,7 +63,7 @@ brew install docker-compose -vvv
 > 找到对应的 release 的boot2docker.iso 文件，放入~/.docker/machine/cache 目录里
 > cd ~/.docker/machine/cache  && wget https://github.com/boot2docker/boot2docker/releases/download/v1.11.0/boot2docker.iso
 
-### 创建虚拟机default
+### Create Virtual machine default
 
 也可以是其他名字，比如 dev, docker-vm, 这里用默认的default
 
@@ -71,7 +71,7 @@ brew install docker-compose -vvv
 docker-machine create --driver virtualbox default
 ```
 
-### 链接虚拟机
+### Link Virtual machine
 
 运行Docker需要设置环境变量
 ```
@@ -87,7 +87,7 @@ fi
 ```
 
 
-## 启动Laravel5-backend
+## Launch Laravel5-backend
 
 准备基础的目录，由于Mac下默认允许挂载/Users/的文件，因此本套方案将系统文件挂载位置强制设置为`~/opt/`
 
@@ -144,7 +144,7 @@ cd laravel5-backend
 make install
 ```
 
-## 参考
+## Reference
 
  * http://avnpc.com/pages/build-php-develop-env-by-docker
  * https://vincent.composieux.fr/article/run-a-symfony-application-using-docker-and-docker-compose
