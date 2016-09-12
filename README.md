@@ -1,4 +1,3 @@
-# Run Under Mac
 
 ## Install
 
@@ -9,13 +8,13 @@ Docker Native
 link: [Getting Started with Docker for Mac](https://docs.docker.com/docker-for-mac/)
 
 
-### Docker based on Virtual VM
+### Docker based on VirtualBox VM
 
 #### requirement
 
 - Homebrew
 - VirtualBox
-- git
+- Git
 
 #### install brew
 
@@ -68,7 +67,7 @@ brew install docker-compose -vvv
 docker-machine create --driver virtualbox default
 ```
 
-#### Link Virtual machine
+#### Link to Virtual machine
 
 运行Docker需要设置环境变量
 ```
