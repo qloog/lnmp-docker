@@ -1,6 +1,15 @@
 # Run Under Mac
 
-## 环境要求
+## Docker for Mac (baseed on HyperKit VM)
+
+Docker Native
+
+link: [Getting Started with Docker for Mac](https://docs.docker.com/docker-for-mac/)
+
+
+## Docker based on Virtual VM
+
+### requirement
 
 - Homebrew
 - VirtualBox
@@ -54,7 +63,7 @@ brew install docker-compose -vvv
 > 找到对应的 release 的boot2docker.iso 文件，放入~/.docker/machine/cache 目录里
 > cd ~/.docker/machine/cache  && wget https://github.com/boot2docker/boot2docker/releases/download/v1.11.0/boot2docker.iso
 
-## 创建虚拟机default
+### 创建虚拟机default
 
 也可以是其他名字，比如 dev, docker-vm, 这里用默认的default
 
@@ -62,7 +71,7 @@ brew install docker-compose -vvv
 docker-machine create --driver virtualbox default
 ```
 
-## 链接虚拟机
+### 链接虚拟机
 
 运行Docker需要设置环境变量
 ```
