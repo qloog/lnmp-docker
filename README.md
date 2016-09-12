@@ -1,21 +1,23 @@
 # Run Under Mac
 
-## Docker for Mac (Recommend)
+## Install
+
+### Docker for Mac (Recommend)
 
 Docker Native
 
 link: [Getting Started with Docker for Mac](https://docs.docker.com/docker-for-mac/)
 
 
-## Docker based on Virtual VM
+### Docker based on Virtual VM
 
-### requirement
+#### requirement
 
 - Homebrew
 - VirtualBox
 - git
 
-### install brew
+#### install brew
 
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -23,7 +25,7 @@ brew update
 brew install wget
 ```
 
-### install virtualbox
+#### install virtualbox
 
 ```
 brew tap caskroom/cask  // 添加 Github 上的 caskroom/cask 库
@@ -31,25 +33,20 @@ brew install brew-cask  // 安装 brew-cask
 brew cask install  VirtualBox // 安装 VirtualBox，保存到：/opt/homebrew-cask/Caskroom
 ```
 
-### xcode
+#### xcode
 
 ```
 xcode-select --install  # 弹窗提示后，点击“安装”即可
 ```
 
-### Git
+#### Git
 
 ```
 brew install git
 ```
 > 安装xcode后，git会被默认安装，如果已安装可忽略
 
-## docker 基础
-
- * [Docker是什么](https://www.docker.com/whatisdocker/)
- * [Docker命令行的基础使用](https://docs.docker.com/userguide/)
-
-## 安装Docker基础环境(Docker/Docker-Machine/Docker-Compose)
+#### Docker environment (Docker/Docker-Machine/Docker-Compose)
 
 ```
 brew tap homebrew/binary
@@ -63,7 +60,7 @@ brew install docker-compose -vvv
 > 找到对应的 release 的boot2docker.iso 文件，放入~/.docker/machine/cache 目录里
 > cd ~/.docker/machine/cache  && wget https://github.com/boot2docker/boot2docker/releases/download/v1.11.0/boot2docker.iso
 
-### Create Virtual machine default
+#### Create Virtual machine default
 
 也可以是其他名字，比如 dev, docker-vm, 这里用默认的default
 
@@ -71,7 +68,7 @@ brew install docker-compose -vvv
 docker-machine create --driver virtualbox default
 ```
 
-### Link Virtual machine
+#### Link Virtual machine
 
 运行Docker需要设置环境变量
 ```
@@ -85,6 +82,11 @@ if [ "`docker-machine status`" = "Running" ]; then
     eval $(docker-machine env default)
 fi
 ```
+
+## About docker
+
+ * [Docker是什么](https://www.docker.com/whatisdocker/)
+ * [Docker命令行的基础使用](https://docs.docker.com/userguide/)
 
 
 ## Launch Laravel5-backend
