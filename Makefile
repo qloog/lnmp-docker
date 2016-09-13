@@ -26,17 +26,16 @@ build:
 	make build-nginx
 	make build-mysql
 	make build-php
-	make build-node
 
 
 build-nginx:
 	docker build -t local/nginx ./nginx
 
 run-nginx:
-	docker run -i -d -p 8080:80 -v ~/opt:/opt -t -d local/nginx
+	docker run -i -d -p 8088:80 -v ~/opt:/opt -t -d local/nginx
 
 in-nginx:
-	docker run -i -p 80:80 -v ~/opt:/opt -t local/nginx /bin/bash
+	docker run -i -p 8088:80 -v ~/opt:/opt -t local/nginx /bin/bash
 
 build-php:
 	docker build -t local/php ./php
