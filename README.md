@@ -5,6 +5,8 @@
 
 Docker Native
 
+直接下载dmg文件安装
+
 link: [Getting Started with Docker for Mac](https://docs.docker.com/docker-for-mac/)
 
 
@@ -114,17 +116,45 @@ cd Dockerfiles
 
 ```
 make dl
-make build
 ```
 
 构建及运行环境
 
 ```
 docker-compose build
-docker-compose up
+docker-compose up or docker-compose up -d
 ```
 
-绑定域名
+登录到镜像服务器
+
+```
+docker run -i -t <IMAGE_ID> /bin/bash
+
+```
+
+如何修改配置文件
+
+ - login into nginx image:
+
+```
+docker run -i -t dockerfiles_nginx /bin/bash
+vim /etc/nginx/conf.d/default.conf
+```
+ - login into php image:
+
+```
+docker run -i -t dockerfiles_php /bin/bash
+vim /usr/local/etc/php/php.ini
+```
+ - login into mysql image:
+
+```
+docker run -i -t dockerfiles_mysql /bin/bash
+vim /usr/local/etc/php/php.ini
+```
+
+
+绑定域名(Docker for Mac 不需要执行该操作)
 
 ```
 sudo vi /etc/hosts

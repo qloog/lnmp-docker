@@ -15,6 +15,7 @@ RUN apt-get install -y \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libpng12-dev \
+        vim \
         && rm -r /var/lib/apt/lists/*
 
 
