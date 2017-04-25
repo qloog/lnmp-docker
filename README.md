@@ -1,17 +1,20 @@
 
 ## Install
 
-### Docker for Mac (Recommend)
+### 1. Docker for Mac (Recommend)
 
 Docker Native
 
-直接下载dmg文件安装
+直接下载官方dmg文件安装
 
 link: [Getting Started with Docker for Mac](https://docs.docker.com/docker-for-mac/)
 
 
-### Docker based on VirtualBox VM
+### 2. Docker based on VirtualBox VM
 
+> 适用于旧版本，现在直接安装官方原生包即可。
+
+<detail>
 #### requirement
 
 - Homebrew
@@ -83,6 +86,7 @@ if [ "`docker-machine status`" = "Running" ]; then
     eval $(docker-machine env default)
 fi
 ```
+</detail>
 
 ## About docker
 
