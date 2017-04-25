@@ -15,6 +15,7 @@ link: [Getting Started with Docker for Mac](https://docs.docker.com/docker-for-m
 > 适用于旧版本，现在直接安装官方原生包即可。
 
 <detail>
+
 #### requirement
 
 - Homebrew
