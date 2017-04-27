@@ -17,7 +17,7 @@ services:
           - "mysql"
           - "memcache"
           - "redis"
-#     - "gearman"
+#         - "gearman"
         volumes:
           - ~/opt:/opt
 
