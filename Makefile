@@ -13,6 +13,7 @@ pull:
 
 dl:
 	wget https://github.com/phalcon/cphalcon/archive/1.3.5.tar.gz -O php/cphalcon.tgz
+	wget https://pecl.php.net/get/yaf-3.0.7.tgz -O php/yaf.tgz
 	wget https://pecl.php.net/get/gearman-1.1.2.tgz -O php/gearman.tgz
 	wget https://pecl.php.net/get/redis-2.2.7.tgz -O php/redis.tgz
 	wget https://pecl.php.net/get/memcached-2.2.0.tgz -O php/memcached.tgz
