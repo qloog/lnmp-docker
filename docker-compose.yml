@@ -39,10 +39,3 @@ services:
         build: ./redis
         ports:
           - "6379:6379"
-
-#gearman:
-#    build: ./gearman
-#    ports:
-#      - "4730:4730"
-#    volumes:
-#      - ~/opt:/opt

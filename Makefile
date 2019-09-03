@@ -14,7 +14,6 @@ pull:
 dl:
 	wget https://github.com/phalcon/cphalcon/archive/1.3.5.tar.gz -O php/cphalcon.tgz
 	wget https://pecl.php.net/get/yaf-3.0.7.tgz -O php/yaf.tgz
-	wget https://pecl.php.net/get/gearman-1.1.2.tgz -O php/gearman.tgz
 	wget https://pecl.php.net/get/redis-2.2.7.tgz -O php/redis.tgz
 	wget https://pecl.php.net/get/memcached-2.2.0.tgz -O php/memcached.tgz
 	wget https://pecl.php.net/get/xdebug-2.3.2.tgz -O php/xdebug.tgz
@@ -73,12 +72,6 @@ run-elasticsearch:
 
 in-elasticsearch:
 	docker run -i -p 9200:9200 -p 9300:9300 -v ~/opt/data/elasticsearch:/usr/share/elasticsearch/data -t local/elasticsearch /bin/bash
-
-build-gearman:
-	docker build -t local/gearman ./gearman
-
-run-gearman:
-	docker run -d -p 4730:4730 -v ~/opt:/opt -it local/gearman
 
 clean:
 	docker rmi -f $(docker images | grep "<none>" | awk "{print \$3}")

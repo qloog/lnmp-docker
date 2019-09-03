@@ -1,3 +1,3 @@
-php/composer.phar
-php/*.tgz
+ubuntu/php/composer.phar
+ubuntu/php/*.tgz
 .idea
